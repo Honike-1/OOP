@@ -1,0 +1,53 @@
+#include <windows.h>
+#include "resource.h"
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Main menu
+//
+IDM_MENU MENU
+BEGIN
+    POPUP "Work"
+    BEGIN
+        MENUITEM      "Work 1", IDM_WORK1
+        MENUITEM      "Work 2", IDM_WORK2
+    END
+END
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Dialog box 1
+//
+IDD_DIALOG1 DIALOGEX 0, 0, 220, 100
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x204
+BEGIN
+    PUSHBUTTON      "Next >", IDC_BTN_NEXT, 105, 70, 50, 14
+    PUSHBUTTON      "Cancel", IDC_BTN_CANCEL, 160, 70, 50, 14
+END
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Dialog box 2
+//
+IDD_DIALOG2 DIALOGEX 0, 0, 220, 100
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x204
+BEGIN
+    PUSHBUTTON      "< Back", IDC_BTN_BACK, 50, 70, 50, 14
+    PUSHBUTTON      "Yes", IDC_BTN_YES, 105, 70, 50, 14
+    PUSHBUTTON      "Cancel", IDC_BTN_CANCEL, 160, 70, 50, 14
+END
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Dialog box 3
+//
+IDD_DIALOG3 DIALOGEX 0, 0, 200, 160
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x204
+BEGIN
+    LISTBOX             IDC_LIST, 15, 25, 170, 100, LBS_STANDARD | WS_TABSTOP
+    DEFPUSHBUTTON       "Yes", IDC_BTN_YES, 85, 135, 50, 14
+    PUSHBUTTON          "Cancel", IDC_BTN_CANCEL, 140, 135, 50, 14
+END
